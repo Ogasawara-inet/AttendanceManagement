@@ -115,7 +115,7 @@
 			
 			</div>
 			
-			<div class="col-12">
+			<div class="col-12 mb-4">
 				
 				<!-- 内容修正ボタン -->
 				<div th:if="${status == 'show_record'}" class="text-center mt-5 mb-3">
@@ -128,10 +128,10 @@
 			
 			
 			
-			<div class="col-6">
+			<div class="col-sm-6 col-12 mb-4">
 			
 				<!-- 社員情報 -->
-				<table class="table table-sm custom-table mt-4 mb-5" 
+				<table class="table table-sm custom-table" 
 						th:object="${employee}">
 					<tr>
 						<th>氏名</th>
@@ -155,9 +155,9 @@
 				
 			</div>
 			
-			<div class="col-6">
+			<div class="col-sm-6 col-12 mb-4">
 				
-				<table class="table table-sm custom-table mt-4 mb-5" 
+				<table class="table table-sm custom-table" 
 						th:object="${report}">
 					<tr>
 						<th>承認者氏名</th>
@@ -178,13 +178,15 @@
 		</div>
 		
 		<!-- 出勤情報 -->
-		<div class="row mb-5">
+		<div class="row mt-4 mb-5">
 			<div class="col">
 				
 				<!-- 祝日の一覧のリスト取得に問題があった場合のメッセージ -->
-				<div id="fileGetError" style="display: none;">
-					<div class="alert alert-danger text-center">
-						祝日一覧の取得中に問題が発生したため、日付の色が正常に表示されていない可能性があります。
+				<div id="errorMessage">
+					<div id="fileGetError" style="display: none;">
+						<div class="alert alert-danger text-center">
+							祝日一覧の取得中に問題が発生したため、日付の色が正常に表示されていない可能性があります。
+						</div>
 					</div>
 				</div>
 					

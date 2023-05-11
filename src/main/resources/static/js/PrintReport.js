@@ -10,14 +10,14 @@ function printReport(){
 	var message = document.getElementById("message"); // 表示メッセージ
 	var info = document.getElementById("info"); // メッセージとボタンのエリア
 	var reportStatus = document.getElementById("reportStatus"); // 「月次報告：～～～」
-	var fileGetError = document.getElementById("fileGetError"); // 祝日のファイルが取得できなかった場合のエラー
+	var errorMessage = document.getElementById("errorMessage"); // 祝日のファイルが取得できなかった場合のエラー
 	
 	// 印刷しない要素を非表示
 	header.style.display = "none";
 	if(message != null) message.style.display = "none"; // 存在しないときもあるのでnullチェック
 	info.style.display = "none";
 	reportStatus.style.display = "none";
-	if(fileGetError != null) fileGetError.style.display = "none";
+	if(errorMessage != null) errorMessage.style.display = "none";
 	
 	// 印刷
 	window.print();
@@ -27,6 +27,6 @@ function printReport(){
 	if(message != null) message.style.display = "block"; // 存在しないときもあるのでnullチェック
 	info.style.display = "block";
 	reportStatus.style.display = "block";
-	if(fileGetError != null) fileGetError.style.display = "block";
+	if (errorMessage!= null) errorMessage.style.display = "block";
 	 
 }
